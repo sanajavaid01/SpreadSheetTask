@@ -54,7 +54,8 @@ return [
     */
 
     'providers' => [
-        App\Providers\AppServiceProvider::class
+        App\Providers\AppServiceProvider::class,
+        \OwenVoke\LaravelZeroDocker\DockerServiceProvider::class,
     ],
 
 
