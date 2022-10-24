@@ -31,10 +31,11 @@ class ReadXml extends Command
      */
     public function handle(DataManagement $data)
     {
-        
+          //reading xml file from url 
             $xml=simplexml_load_file($this->argument('url'),'SimpleXMLElement', LIBXML_NOCDATA);
             $json = json_encode($xml);
             $array = json_decode($json,TRUE);
+          
             Log::info('XML file with this url:'.$this->argument('url').' read sucessfully.');
             if($data->pushdata($array['item']))
             {

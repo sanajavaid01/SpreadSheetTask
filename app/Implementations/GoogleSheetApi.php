@@ -29,6 +29,14 @@ class GoogleSheetApi implements DataManagement
         // get all the rows of a sheet
         $range = env('SHEET_RANGE'); // here we use the name of the Sheet to get or set all the rows
         $final_array=array();
+        $key_array=array();
+         foreach($data[0] as $key=>$val)
+         {
+            array_push($key_array,$key);
+         }
+         array_push($final_array,$key_array);
+         
+
         foreach($data as $a)
         {
             $a1=array();
@@ -39,6 +47,7 @@ class GoogleSheetApi implements DataManagement
                     $val="";
                 }
                 array_push($a1,$val);
+                
             }
               array_push($final_array,$a1);
         }
