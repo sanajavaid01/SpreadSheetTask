@@ -6,7 +6,7 @@
                  <br>
                 syntax:
                 <br>
-                php spreadsheet read:xml <url> 
+                php spreadsheet read:xml url-path 
                 <br>
             example:
                 <br>
